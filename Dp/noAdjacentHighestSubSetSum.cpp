@@ -24,5 +24,8 @@ int main (){
     cout<<dp[n];
 
 
-    
+    return 0;
+
+    //o(n) --->time_complexity
+    //0(n) --->space complexity
 }
