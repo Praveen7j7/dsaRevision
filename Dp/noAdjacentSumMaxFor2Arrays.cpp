@@ -29,6 +29,8 @@ int main() {
         ll z=a[i]+dp[i-2];
 
         dp[i]=max(x,max(y,z));
+        cout<<dp[i]<<endl;
+
 
         i++;
     }
