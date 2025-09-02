@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std; 
 typedef long long int ll;
+//In this question aap row check kro ya column check kro answer will be same
+//as it is undirected graph 
 
 int main() {
 
