@@ -23,6 +23,25 @@ int main() {
 
     cout << p << endl;
     return 0;
+    //TC=>0(N^2)
 }
 
-//TC=>0(N^2)
+
+//Optimal  Approach
+
+// ll sum=0;
+// for(int i=0,j=0;j<n;j++)
+// {
+//     sum=sum+b[j];
+//     while(sum>k){
+//         sum=sum-b[i];
+//         i++;
+
+//     }
+//     ll length=(j-i+1); //sum[i.....j] <= k -> checking its length.
+        //  p = max(p, l);
+// }
+// cout<<p;
+// return 0;
+
+// TC(2N)
