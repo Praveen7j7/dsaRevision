@@ -3,6 +3,7 @@
 using namespace std; 
 typedef long long int ll;
 
+//brute force approach 
 int main() {
 
 int arr[]={2,3,4,5,6,7,8,55,4};
@@ -25,8 +26,37 @@ for(int i=1;i<=n;i++){
         minElement=arr[i];
     }
 }
-
-
-
     return 0;
+}
+
+
+//Optimized
+void hashedVersion(int arr[], int n)
+{
+    map<int, int> mp;
+
+    int maxiFreq, maxiElement, miniFreq, miniElement;
+    for(int i=0;i<n;i++)
+    {
+        if(mp.find(arr[i]) == mp.end())
+        {
+            mp[arr[i]]=1;
+
+        }
+        else{
+            mp[arr[i]]+=1;
+        }
+        if(maxiFreq<mp[arr[i]])
+        {
+            maxiFreq=mp[arr[i]];
+            maxiElement=arr[i];
+        }
+        if(miniFreq >  mp[arr[i]]){
+            miniFreq=mp[arr[i]];
+            miniElement=arr[i];
+        }
+    }
+    //print (maxiFreq, maxiElement)
+    //print (miniFreq, miniElement)
+    return;
 }
